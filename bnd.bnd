@@ -1,0 +1,16 @@
+Bundle-Activator: de.bildschirmarbeiter.asf.toolbox.application.Activator
+
+Bundle-Description: ${project.description}
+
+Bundle-DocURL: ${project.organization.url}
+
+Bundle-License: https://www.apache.org/licenses/LICENSE-2.0.txt
+
+Bundle-Vendor: ${project.organization.name}
+
+-includeresource:\
+  @maven-artifact-*.jar!/org/apache/maven/artifact/versioning/ComparableVersion*.*
+
+-removeheaders:\
+  Include-Resource,\
+  Private-Package

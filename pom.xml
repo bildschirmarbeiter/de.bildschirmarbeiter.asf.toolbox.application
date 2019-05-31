@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>de.bildschirmarbeiter.asf</groupId>
+    <artifactId>asf-parent</artifactId>
+    <version>1</version>
+    <relativePath/>
+  </parent>
+
+  <groupId>de.bildschirmarbeiter.asf.toolbox</groupId>
+  <artifactId>de.bildschirmarbeiter.asf.toolbox.application</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <name>Bildschirmarbeiter ASF Toolbox Application</name>
+  <description>${project.name}</description>
+
+  <url>https://github.com/bildschirmarbeiter/de.bildschirmarbeiter.asf.toolbox.application</url>
+
+  <scm>
+    <connection>scm:git:git://github.com/bildschirmarbeiter/de.bildschirmarbeiter.asf.toolbox.application.git</connection>
+    <developerConnection>scm:git:git@github.com:bildschirmarbeiter/de.bildschirmarbeiter.asf.toolbox.application.git</developerConnection>
+    <url>https://github.com/bildschirmarbeiter/de.bildschirmarbeiter.asf.toolbox.application/tree/master</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>biz.aQute.bnd</groupId>
+        <artifactId>bnd-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>biz.aQute.bnd</groupId>
+        <artifactId>bnd-baseline-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <!-- Bildschirmarbeiter -->
+    <dependency>
+      <groupId>de.bildschirmarbeiter.application</groupId>
+      <artifactId>de.bildschirmarbeiter.application.message</artifactId>
+      <version>0.0.2</version>
+    </dependency>
+    <!-- Google -->
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>15.0</version>
+    </dependency>
+    <!-- JSON -->
+    <dependency>
+      <groupId>com.jayway.jsonpath</groupId>
+      <artifactId>json-path</artifactId>
+      <version>2.4.0</version>
+    </dependency>
+    <!-- XML -->
+    <dependency>
+      <groupId>org.jooq</groupId>
+      <artifactId>joox</artifactId>
+      <version>1.5.0</version>
+    </dependency>
+    <!-- OSGi -->
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.service.component.annotations</artifactId>
+      <version>1.4.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.service.metatype.annotations</artifactId>
+      <version>1.4.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>osgi.core</artifactId>
+      <version>7.0.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <!-- Apache Commons -->
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.6</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.9</version>
+    </dependency>
+    <!-- Apache HTTP -->
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpcore-osgi</artifactId>
+      <version>4.4.11</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient-osgi</artifactId>
+      <version>4.5.8</version>
+      <exclusions>
+        <exclusion>
+          <groupId>commons-logging</groupId>
+          <artifactId>commons-logging</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <!-- Apache Felix -->
+    <dependency>
+      <groupId>org.apache.felix</groupId>
+      <artifactId>org.apache.felix.framework</artifactId>
+      <version>6.0.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.felix</groupId>
+      <artifactId>org.apache.felix.configadmin</artifactId>
+      <version>1.9.14</version>
+    </dependency>
+    <!-- Apache Maven -->
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-artifact</artifactId>
+      <version>3.6.1</version>
+      <scope>provided</scope>
+    </dependency>
+    <!-- Handlebars -->
+    <dependency>
+      <groupId>com.github.jknack</groupId>
+      <artifactId>handlebars</artifactId>
+      <version>4.1.2</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.mozilla</groupId>
+          <artifactId>rhino</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.bundles</groupId>
+      <artifactId>org.apache.servicemix.bundles.rhino</artifactId>
+      <version>1.7.10_1</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+    </dependency>
+    <!-- OPS4J -->
+    <dependency>
+      <groupId>org.ops4j.pax.url</groupId>
+      <artifactId>pax-url-aether</artifactId>
+      <version>2.6.1</version>
+    </dependency>
+  </dependencies>
+
+</project>
