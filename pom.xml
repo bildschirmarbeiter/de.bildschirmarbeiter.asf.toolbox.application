@@ -12,7 +12,7 @@
 
   <groupId>de.bildschirmarbeiter.asf.toolbox</groupId>
   <artifactId>de.bildschirmarbeiter.asf.toolbox.application</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2-SNAPSHOT</version>
 
   <name>Bildschirmarbeiter ASF Toolbox Application</name>
   <description>${project.name}</description>
@@ -23,7 +23,7 @@
     <connection>scm:git:git://github.com/bildschirmarbeiter/de.bildschirmarbeiter.asf.toolbox.application.git</connection>
     <developerConnection>scm:git:git@github.com:bildschirmarbeiter/de.bildschirmarbeiter.asf.toolbox.application.git</developerConnection>
     <url>https://github.com/bildschirmarbeiter/de.bildschirmarbeiter.asf.toolbox.application/tree/master</url>
-    <tag>de.bildschirmarbeiter.asf.toolbox.application-0.0.1</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <build>
